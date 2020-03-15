@@ -1,0 +1,28 @@
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\bin\Debug\Firmware Update V1.0.exe.config
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\bin\Debug\Firmware Update V1.0.exe
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\bin\Debug\Firmware Update V1.0.pdb
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\obj\Debug\Firmware_Update_V1._0.Form1.resources
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\obj\Debug\Firmware_Update_V1._0.Form2.resources
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\obj\Debug\Firmware_Update_V1._0.Form3.resources
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\obj\Debug\Firmware_Update_V1._0.serialctr.resources
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\obj\Debug\Firmware_Update_V1._0.Properties.Resources.resources
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\obj\Debug\IoT_Platform.csproj.GenerateResource.Cache
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\obj\Debug\Firmware Update V1.0.exe.licenses
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\obj\Debug\Firmware Update V1.0.exe
+G:\MyProjects\Firmware_Update\Firmware Update V1.0\obj\Debug\Firmware Update V1.0.pdb
+G:\MyProjects\IoT_Platform\Firmware Update V1.0\bin\Debug\Firmware Update V1.0.exe.config
+G:\MyProjects\IoT_Platform\Firmware Update V1.0\obj\Debug\Firmware Update V1.0.exe
+G:\MyProjects\IoT_Platform\Firmware Update V1.0\obj\Debug\Firmware Update V1.0.pdb
+G:\MyProjects\IoT_Platform\IoT_Platform\obj\Debug\IoT_Platform.csprojResolveAssemblyReference.cache
+G:\MyProjects\IoT_Platform\IoT_Platform\obj\Debug\Firmware_Update_V1._0.Form1.resources
+G:\MyProjects\IoT_Platform\IoT_Platform\obj\Debug\Firmware_Update_V1._0.Form2.resources
+G:\MyProjects\IoT_Platform\IoT_Platform\obj\Debug\Firmware_Update_V1._0.Form3.resources
+G:\MyProjects\IoT_Platform\IoT_Platform\obj\Debug\Firmware_Update_V1._0.serialctr.resources
+G:\MyProjects\IoT_Platform\IoT_Platform\obj\Debug\IoT_Platform.csproj.GenerateResource.Cache
+G:\MyProjects\IoT_Platform\IoT_Platform\bin\Debug\IoT_Platform.exe.config
+G:\MyProjects\IoT_Platform\IoT_Platform\bin\Debug\IoT_Platform.exe
+G:\MyProjects\IoT_Platform\IoT_Platform\bin\Debug\IoT_Platform.pdb
+G:\MyProjects\IoT_Platform\IoT_Platform\obj\Debug\IoT_Platform.Properties.Resources.resources
+G:\MyProjects\IoT_Platform\IoT_Platform\obj\Debug\IoT_Platform.exe.licenses
+G:\MyProjects\IoT_Platform\IoT_Platform\obj\Debug\IoT_Platform.exe
+G:\MyProjects\IoT_Platform\IoT_Platform\obj\Debug\IoT_Platform.pdb
