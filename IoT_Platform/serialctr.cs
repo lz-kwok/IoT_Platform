@@ -49,9 +49,12 @@ namespace Firmware_Update_V1._0
             if (serialConnect.Text == "连接")
             {
                 serialConnect.Text = "断开";
+                f1.OpenUSB_Port(comboBox1.Text, serialBaudrate.Text, serialNumbit.Text,serialStopbit.Text,
+                    serialParity.Text,serialFlowctr.Text);
             }
             else {
                 serialConnect.Text = "连接";
+                f1.CloseUSB_Port();
             }
         }
 

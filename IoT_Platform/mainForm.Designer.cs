@@ -556,9 +556,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.串口设置ToolStripMenuItem,
-            this.第三方应用ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(610, 25);
@@ -578,14 +575,14 @@
             // 串口设置ToolStripMenuItem1
             // 
             this.串口设置ToolStripMenuItem1.Name = "串口设置ToolStripMenuItem1";
-            this.串口设置ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.串口设置ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.串口设置ToolStripMenuItem1.Text = "串口设置";
             this.串口设置ToolStripMenuItem1.Click += new System.EventHandler(this.串口设置ToolStripMenuItem1_Click);
             // 
             // 固件升级ToolStripMenuItem
             // 
             this.固件升级ToolStripMenuItem.Name = "固件升级ToolStripMenuItem";
-            this.固件升级ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.固件升级ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.固件升级ToolStripMenuItem.Text = "网口设置";
             // 
             // 第三方应用ToolStripMenuItem
@@ -618,7 +615,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TN19002单逆测试台客户端";
+            this.Text = "IoT_Platform";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

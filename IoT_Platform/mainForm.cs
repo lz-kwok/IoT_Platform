@@ -123,6 +123,27 @@ namespace Firmware_Update_V1._0
             
         }
 
+        public void OpenUSB_Port(string portName, String baudRate,
+            string dataBits, string stopBits, string parity, string handshake)
+        {
+            try
+            {
+                controller.OpenSerialPort(portName, baudRate,
+                    dataBits, stopBits, parity,            //dataBitsCbx.Text, stopBitsCbx.Text, parityCbx.Text,
+                    handshake);
+                openCloseSpbtn.Text = "断开连接";
+            }
+            catch
+            {
+                MessageBox.Show("串口连接失败", "错误");
+            }
+        }
+
+        public void CloseUSB_Port()
+        {
+            controller.CloseSerialPort();
+        }
+
         public void OpenComEvent(Object sender, SerialPortEventArgs e)
         {
             if (this.InvokeRequired)
