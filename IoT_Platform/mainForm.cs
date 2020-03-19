@@ -62,16 +62,10 @@ namespace Firmware_Update_V1._0
             this.stopBitsCbx.SelectedIndex = 0;//停止位默认“1”
             this.handshakingcbx.SelectedIndex = 0;//流控位默认“0”
 
-            update_button.Enabled = false;                  //“升级固件”禁按
             start_button.Enabled = false;                   //“复位终端”禁按
             query_mode_button.Enabled = false;               //“查询终端”可按
         }
 
-        private void button1_Click(object sender, EventArgs e)//“搜索”
-        {
-            comListCbx.Text = "";
-            SearchAndAddSerialToComboBox(serialPort1, comListCbx);//调用扫描代码
-        }
         private void SearchAndAddSerialToComboBox(SerialPort MyPort, ComboBox MyBox)//扫描代码
         {                                                               //将可用端口号添加到ComboBox
             string Buffer;                                              //缓存
@@ -97,31 +91,6 @@ namespace Firmware_Update_V1._0
             SearchAndAddSerialToComboBox(serialPort1, MyBox);//调用扫描代码
         }
 
-        private void openCloseSpbtn_Click(object sender, EventArgs e)//“打开串口”
-        {
-            try
-            {
-                if (openCloseSpbtn.Text == "开始连接")
-                {
-                    controller.OpenSerialPort(comListCbx.Text, baudRateCbx.Text,
-                        dataBitsCbx.Text, stopBitsCbx.Text, parityCbx.Text,            //dataBitsCbx.Text, stopBitsCbx.Text, parityCbx.Text,
-                        handshakingcbx.Text);
-                    openCloseSpbtn.Text = "断开连接";
-                    update_button.Enabled = false;                  //“升级固件”禁按
-                    start_button.Enabled = false;                   //“复位终端”禁按
-                    query_mode_button.Enabled = true;               //“查询终端”可按
-                }
-                else
-                {
-                    controller.CloseSerialPort();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("串口连接失败", "错误");
-            }
-            
-        }
 
         public void OpenUSB_Port(string portName, String baudRate,
             string dataBits, string stopBits, string parity, string handshake)
@@ -131,7 +100,8 @@ namespace Firmware_Update_V1._0
                 controller.OpenSerialPort(portName, baudRate,
                     dataBits, stopBits, parity,            //dataBitsCbx.Text, stopBitsCbx.Text, parityCbx.Text,
                     handshake);
-                openCloseSpbtn.Text = "断开连接";
+                start_button.Enabled = false;                   //“复位终端”禁按
+                query_mode_button.Enabled = true;               //“查询终端”可按
             }
             catch
             {
@@ -142,6 +112,8 @@ namespace Firmware_Update_V1._0
         public void CloseUSB_Port()
         {
             controller.CloseSerialPort();
+            start_button.Enabled = false;                   //“复位终端”禁按
+            query_mode_button.Enabled = false;               //“查询终端”可按
         }
 
         public void OpenComEvent(Object sender, SerialPortEventArgs e)
@@ -157,14 +129,10 @@ namespace Firmware_Update_V1._0
                 try
                 {
                     timer1.Enabled = false;//关闭定时器
-                    openCloseSpbtn.Text = "开始连接";
-                    comListCbx.Enabled = true;//“端口号”可选
                     baudRateCbx.Enabled = true;//“波特率”可选
                     parityCbx.Enabled = true;//“校验位”可选
                     dataBitsCbx.Enabled = true;//“数据位”可选
                     stopBitsCbx.Enabled = true;//“停止位”可选
-                    button1.Enabled = true;//“搜索”可按
-                    update_button.Enabled = false;//“升级固件”禁按
                     start_button.Enabled = false;//“复位终端”禁按
 
                     query_mode_button.Enabled = false;//“查询模式”禁按
@@ -187,9 +155,6 @@ namespace Firmware_Update_V1._0
 
             if (!e.isOpend) //close successfully
             {
-                openCloseSpbtn.Text = "开始连接";
-
-                comListCbx.Enabled = true;
                 baudRateCbx.Enabled = false;
                 dataBitsCbx.Enabled = false;
                 stopBitsCbx.Enabled = false;
@@ -392,20 +357,17 @@ namespace Firmware_Update_V1._0
             }
             if (firmware_version.Text == null || firmware_version.Text == "")
             {
-                update_button.Enabled = false;  //“升级固件”禁按
                 start_button.Enabled = false;   //“复位终端”禁按
             
      
             }
             else if (firmware_version.Text == "255")
             {
-                update_button.Enabled = false;//“升级固件”可按
                 start_button.Enabled = false;//“复位终端”可按           
           
             }
             else
             {
-                update_button.Enabled = true;//“升级固件”可按
                 start_button.Enabled = true;//“复位终端”可按             
             }
         }
@@ -606,16 +568,17 @@ namespace Firmware_Update_V1._0
 
         }
 
-        private void 串口设置ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void 串口设置ToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             serialctr frm = new serialctr(this);//首先实例化
             frm.ShowDialog();
         }
 
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form2 frm = new Form2(this);//首先实例化
+            frm.ShowDialog();
+        }
     }
 }

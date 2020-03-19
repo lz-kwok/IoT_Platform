@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comListCbx = new System.Windows.Forms.ComboBox();
             this.baudRateCbx = new System.Windows.Forms.ComboBox();
             this.parityCbx = new System.Windows.Forms.ComboBox();
             this.dataBitsCbx = new System.Windows.Forms.ComboBox();
             this.stopBitsCbx = new System.Windows.Forms.ComboBox();
-            this.openCloseSpbtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -51,7 +51,6 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -59,7 +58,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.query_mode_button = new DevExpress.XtraEditors.SimpleButton();
-            this.update_button = new DevExpress.XtraEditors.SimpleButton();
             this.start_button = new DevExpress.XtraEditors.SimpleButton();
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             this.sidePanel4 = new DevExpress.XtraEditors.SidePanel();
@@ -68,43 +66,40 @@
             this.sendtbx = new System.Windows.Forms.TextBox();
             this.receivetbx = new System.Windows.Forms.TextBox();
             this.handshakingcbx = new System.Windows.Forms.ComboBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.串口设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.串口设置ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.固件升级ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.第三方应用ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tN19002单逆测试台ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
+            this.barButtonGroup2 = new DevExpress.XtraBars.BarButtonGroup();
+            this.barButtonGroup3 = new DevExpress.XtraBars.BarButtonGroup();
+            this.barButtonGroup4 = new DevExpress.XtraBars.BarButtonGroup();
+            this.barButtonGroup5 = new DevExpress.XtraBars.BarButtonGroup();
+            this.barButtonGroup6 = new DevExpress.XtraBars.BarButtonGroup();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
+            this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.sidePanel1.SuspendLayout();
             this.sidePanel4.SuspendLayout();
             this.sidePanel2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(23, 64);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 20);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "扫描端口";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "端口号：";
             // 
             // label2
             // 
@@ -145,17 +140,6 @@
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 5;
             this.label5.Text = "停止位：";
-            // 
-            // comListCbx
-            // 
-            this.comListCbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comListCbx.FormattingEnabled = true;
-            this.comListCbx.Location = new System.Drawing.Point(23, 36);
-            this.comListCbx.Margin = new System.Windows.Forms.Padding(2);
-            this.comListCbx.Name = "comListCbx";
-            this.comListCbx.Size = new System.Drawing.Size(105, 20);
-            this.comListCbx.TabIndex = 6;
-            this.comListCbx.SelectedIndexChanged += new System.EventHandler(this.comListCbx_SelectedIndexChanged);
             // 
             // baudRateCbx
             // 
@@ -222,17 +206,6 @@
             this.stopBitsCbx.Size = new System.Drawing.Size(88, 20);
             this.stopBitsCbx.TabIndex = 10;
             this.stopBitsCbx.SelectedIndexChanged += new System.EventHandler(this.stopBitsCbx_SelectedIndexChanged);
-            // 
-            // openCloseSpbtn
-            // 
-            this.openCloseSpbtn.Location = new System.Drawing.Point(23, 92);
-            this.openCloseSpbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.openCloseSpbtn.Name = "openCloseSpbtn";
-            this.openCloseSpbtn.Size = new System.Drawing.Size(105, 22);
-            this.openCloseSpbtn.TabIndex = 11;
-            this.openCloseSpbtn.Text = "开始连接";
-            this.openCloseSpbtn.UseVisualStyleBackColor = true;
-            this.openCloseSpbtn.Click += new System.EventHandler(this.openCloseSpbtn_Click);
             // 
             // button3
             // 
@@ -333,22 +306,6 @@
             this.checkBox1.Text = "显示时间戳";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comListCbx);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.openCloseSpbtn);
-            this.groupBox1.Location = new System.Drawing.Point(11, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(150, 126);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "串口配置";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button5);
@@ -434,16 +391,6 @@
             this.query_mode_button.Text = "模式查询";
             this.query_mode_button.Click += new System.EventHandler(this.query_mode_button_Click);
             // 
-            // update_button
-            // 
-            this.update_button.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("update_button.ImageOptions.Image")));
-            this.update_button.Location = new System.Drawing.Point(153, 14);
-            this.update_button.Name = "update_button";
-            this.update_button.Size = new System.Drawing.Size(128, 43);
-            this.update_button.TabIndex = 1;
-            this.update_button.Text = "固件升级";
-            this.update_button.Click += new System.EventHandler(this.update_button_Click);
-            // 
             // start_button
             // 
             this.start_button.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("start_button.ImageOptions.Image")));
@@ -458,9 +405,9 @@
             // 
             this.sidePanel1.Controls.Add(this.sidePanel4);
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sidePanel1.Location = new System.Drawing.Point(0, 25);
+            this.sidePanel1.Location = new System.Drawing.Point(0, 163);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(610, 447);
+            this.sidePanel1.Size = new System.Drawing.Size(610, 445);
             this.sidePanel1.TabIndex = 39;
             this.sidePanel1.Text = "sidePanel1";
             // 
@@ -468,7 +415,6 @@
             // 
             this.sidePanel4.Controls.Add(this.sidePanel2);
             this.sidePanel4.Controls.Add(this.sendtbx);
-            this.sidePanel4.Controls.Add(this.groupBox1);
             this.sidePanel4.Controls.Add(this.receivetbx);
             this.sidePanel4.Controls.Add(this.label5);
             this.sidePanel4.Controls.Add(this.dataBitsCbx);
@@ -484,7 +430,7 @@
             this.sidePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sidePanel4.Location = new System.Drawing.Point(0, 0);
             this.sidePanel4.Name = "sidePanel4";
-            this.sidePanel4.Size = new System.Drawing.Size(610, 447);
+            this.sidePanel4.Size = new System.Drawing.Size(610, 445);
             this.sidePanel4.TabIndex = 26;
             this.sidePanel4.Text = "sidePanel4";
             // 
@@ -492,10 +438,9 @@
             // 
             this.sidePanel2.Controls.Add(this.firmware_version);
             this.sidePanel2.Controls.Add(this.start_button);
-            this.sidePanel2.Controls.Add(this.update_button);
             this.sidePanel2.Controls.Add(this.query_mode_button);
             this.sidePanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sidePanel2.Location = new System.Drawing.Point(0, 378);
+            this.sidePanel2.Location = new System.Drawing.Point(0, 376);
             this.sidePanel2.Name = "sidePanel2";
             this.sidePanel2.Size = new System.Drawing.Size(610, 69);
             this.sidePanel2.TabIndex = 25;
@@ -554,62 +499,218 @@
             this.handshakingcbx.TabIndex = 29;
             this.handshakingcbx.SelectedIndexChanged += new System.EventHandler(this.handshakingcbx_SelectedIndexChanged);
             // 
-            // menuStrip1
+            // ribbonControl1
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(610, 25);
-            this.menuStrip1.TabIndex = 40;
-            this.menuStrip1.Text = "menuStrip1";
+            this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl1.ExpandCollapseItem,
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barButtonGroup1,
+            this.barButtonGroup2,
+            this.barButtonGroup3,
+            this.barButtonGroup4,
+            this.barButtonGroup5,
+            this.barButtonGroup6,
+            this.barButtonItem4,
+            this.barSubItem1,
+            this.barStaticItem1,
+            this.barButtonItem5,
+            this.barButtonItem6,
+            this.barHeaderItem1,
+            this.barSubItem2,
+            this.barCheckItem1,
+            this.barMdiChildrenListItem1});
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.MaxItemId = 19;
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage1,
+            this.ribbonPage3});
+            this.ribbonControl1.Size = new System.Drawing.Size(610, 163);
             // 
-            // 串口设置ToolStripMenuItem
+            // barButtonItem1
             // 
-            this.串口设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.串口设置ToolStripMenuItem1,
-            this.固件升级ToolStripMenuItem});
-            this.串口设置ToolStripMenuItem.Name = "串口设置ToolStripMenuItem";
-            this.串口设置ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.串口设置ToolStripMenuItem.Text = "设置";
-            this.串口设置ToolStripMenuItem.Click += new System.EventHandler(this.串口设置ToolStripMenuItem_Click);
+            this.barButtonItem1.Caption = "串口设置";
+            this.barButtonItem1.Id = 1;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
-            // 串口设置ToolStripMenuItem1
+            // barButtonItem2
             // 
-            this.串口设置ToolStripMenuItem1.Name = "串口设置ToolStripMenuItem1";
-            this.串口设置ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
-            this.串口设置ToolStripMenuItem1.Text = "串口设置";
-            this.串口设置ToolStripMenuItem1.Click += new System.EventHandler(this.串口设置ToolStripMenuItem1_Click);
+            this.barButtonItem2.Caption = "网口设置";
+            this.barButtonItem2.Id = 2;
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // 固件升级ToolStripMenuItem
+            // barButtonItem3
             // 
-            this.固件升级ToolStripMenuItem.Name = "固件升级ToolStripMenuItem";
-            this.固件升级ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.固件升级ToolStripMenuItem.Text = "网口设置";
+            this.barButtonItem3.Caption = "版本升级";
+            this.barButtonItem3.Id = 3;
+            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
-            // 第三方应用ToolStripMenuItem
+            // barButtonGroup1
             // 
-            this.第三方应用ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tN19002单逆测试台ToolStripMenuItem});
-            this.第三方应用ToolStripMenuItem.Name = "第三方应用ToolStripMenuItem";
-            this.第三方应用ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.第三方应用ToolStripMenuItem.Text = "应用";
+            this.barButtonGroup1.Caption = "barButtonGroup1";
+            this.barButtonGroup1.Id = 4;
+            this.barButtonGroup1.Name = "barButtonGroup1";
             // 
-            // tN19002单逆测试台ToolStripMenuItem
+            // barButtonGroup2
             // 
-            this.tN19002单逆测试台ToolStripMenuItem.Name = "tN19002单逆测试台ToolStripMenuItem";
-            this.tN19002单逆测试台ToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.tN19002单逆测试台ToolStripMenuItem.Text = "TN19002单逆测试台";
+            this.barButtonGroup2.Caption = "模式查询";
+            this.barButtonGroup2.Id = 5;
+            this.barButtonGroup2.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barButtonGroup2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonGroup2.ImageOptions.Image")));
+            this.barButtonGroup2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonGroup2.ImageOptions.LargeImage")));
+            this.barButtonGroup2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonGroup2.ImageOptions.SvgImage")));
+            this.barButtonGroup2.Name = "barButtonGroup2";
+            // 
+            // barButtonGroup3
+            // 
+            this.barButtonGroup3.Caption = "barButtonGroup3";
+            this.barButtonGroup3.Id = 6;
+            this.barButtonGroup3.Name = "barButtonGroup3";
+            // 
+            // barButtonGroup4
+            // 
+            this.barButtonGroup4.Id = 7;
+            this.barButtonGroup4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonGroup4.ImageOptions.Image")));
+            this.barButtonGroup4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonGroup4.ImageOptions.LargeImage")));
+            this.barButtonGroup4.Name = "barButtonGroup4";
+            // 
+            // barButtonGroup5
+            // 
+            this.barButtonGroup5.Caption = "barButtonGroup5";
+            this.barButtonGroup5.Id = 8;
+            this.barButtonGroup5.Name = "barButtonGroup5";
+            // 
+            // barButtonGroup6
+            // 
+            this.barButtonGroup6.Caption = "barButtonGroup6";
+            this.barButtonGroup6.Id = 9;
+            this.barButtonGroup6.Name = "barButtonGroup6";
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Id = 10;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "barSubItem1";
+            this.barSubItem1.Id = 11;
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "barStaticItem1";
+            this.barStaticItem1.Id = 12;
+            this.barStaticItem1.Name = "barStaticItem1";
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "barButtonItem5";
+            this.barButtonItem5.Id = 13;
+            this.barButtonItem5.Name = "barButtonItem5";
+            // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "barButtonItem6";
+            this.barButtonItem6.Id = 14;
+            this.barButtonItem6.Name = "barButtonItem6";
+            // 
+            // barHeaderItem1
+            // 
+            this.barHeaderItem1.Caption = "barHeaderItem1";
+            this.barHeaderItem1.Id = 15;
+            this.barHeaderItem1.Name = "barHeaderItem1";
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "barSubItem2";
+            this.barSubItem2.Id = 16;
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // barCheckItem1
+            // 
+            this.barCheckItem1.Caption = "barCheckItem1";
+            this.barCheckItem1.Id = 17;
+            this.barCheckItem1.Name = "barCheckItem1";
+            // 
+            // barMdiChildrenListItem1
+            // 
+            this.barMdiChildrenListItem1.Caption = "单逆类型";
+            this.barMdiChildrenListItem1.Id = 18;
+            this.barMdiChildrenListItem1.Name = "barMdiChildrenListItem1";
+            toolTipTitleItem1.Text = "单独";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "的的";
+            toolTipTitleItem2.LeftIndent = 6;
+            toolTipTitleItem2.Text = "强无敌";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            superToolTip1.Items.Add(toolTipTitleItem2);
+            this.barMdiChildrenListItem1.SuperTip = superToolTip1;
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup3});
+            this.ribbonPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
+            this.ribbonPage1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage1.ImageOptions.SvgImage")));
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "设置";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "serial";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup2.ImageOptions.Image")));
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "net";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "OTA";
+            // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage3.ImageOptions.Image")));
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "应用";
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "ribbonPage2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(610, 472);
+            this.ClientSize = new System.Drawing.Size(610, 608);
             this.Controls.Add(this.sidePanel1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -621,8 +722,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -632,8 +731,7 @@
             this.sidePanel4.PerformLayout();
             this.sidePanel2.ResumeLayout(false);
             this.sidePanel2.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -641,19 +739,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
         //private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comListCbx;
         private System.Windows.Forms.ComboBox baudRateCbx;
         private System.Windows.Forms.ComboBox parityCbx;
         private System.Windows.Forms.ComboBox dataBitsCbx;
         private System.Windows.Forms.ComboBox stopBitsCbx;
-        private System.Windows.Forms.Button openCloseSpbtn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -663,7 +757,6 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button5;
@@ -673,19 +766,37 @@
         private DevExpress.XtraEditors.SidePanel sidePanel1;
         private DevExpress.XtraEditors.SidePanel sidePanel4;
         private DevExpress.XtraEditors.SimpleButton query_mode_button;
-        private DevExpress.XtraEditors.SimpleButton update_button;
         private DevExpress.XtraEditors.SimpleButton start_button;
         private System.Windows.Forms.TextBox sendtbx;
         private System.Windows.Forms.TextBox receivetbx;
         private DevExpress.XtraEditors.SidePanel sidePanel2;
         private System.Windows.Forms.TextBox firmware_version;
         private System.Windows.Forms.ComboBox handshakingcbx;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 串口设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 串口设置ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem 固件升级ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 第三方应用ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tN19002单逆测试台ToolStripMenuItem;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup2;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup3;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup4;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup5;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup6;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
+        private DevExpress.XtraBars.BarSubItem barSubItem2;
+        private DevExpress.XtraBars.BarCheckItem barCheckItem1;
+        private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem1;
     }
 }
 
