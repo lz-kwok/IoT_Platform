@@ -56,14 +56,12 @@ namespace Firmware_Update_V1._0
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.baudRateCbx.SelectedIndex = 3;//波特率默认“115200”
-            this.parityCbx.SelectedIndex = 0;//校验位默认“None”
-            this.dataBitsCbx.SelectedIndex = 3;//数据位默认“8”
-            this.stopBitsCbx.SelectedIndex = 0;//停止位默认“1”
-            this.handshakingcbx.SelectedIndex = 0;//流控位默认“0”
-
-            start_button.Enabled = false;                   //“复位终端”禁按
-            query_mode_button.Enabled = false;               //“查询终端”可按
+            //this.baudRateCbx.SelectedIndex = 3;//波特率默认“115200”
+            //this.parityCbx.SelectedIndex = 0;//校验位默认“None”
+            //this.dataBitsCbx.SelectedIndex = 3;//数据位默认“8”
+            //this.stopBitsCbx.SelectedIndex = 0;//停止位默认“1”
+            //this.handshakingcbx.SelectedIndex = 0;//流控位默认“0”
+            barButtonItem9.Enabled = false;
         }
 
         private void SearchAndAddSerialToComboBox(SerialPort MyPort, ComboBox MyBox)//扫描代码
@@ -100,8 +98,8 @@ namespace Firmware_Update_V1._0
                 controller.OpenSerialPort(portName, baudRate,
                     dataBits, stopBits, parity,            //dataBitsCbx.Text, stopBitsCbx.Text, parityCbx.Text,
                     handshake);
-                start_button.Enabled = false;                   //“复位终端”禁按
-                query_mode_button.Enabled = true;               //“查询终端”可按
+
+                barButtonItem9.Enabled = false;
             }
             catch
             {
@@ -112,8 +110,7 @@ namespace Firmware_Update_V1._0
         public void CloseUSB_Port()
         {
             controller.CloseSerialPort();
-            start_button.Enabled = false;                   //“复位终端”禁按
-            query_mode_button.Enabled = false;               //“查询终端”可按
+            barButtonItem9.Enabled = false;
         }
 
         public void OpenComEvent(Object sender, SerialPortEventArgs e)
@@ -129,14 +126,10 @@ namespace Firmware_Update_V1._0
                 try
                 {
                     timer1.Enabled = false;//关闭定时器
-                    baudRateCbx.Enabled = true;//“波特率”可选
-                    parityCbx.Enabled = true;//“校验位”可选
-                    dataBitsCbx.Enabled = true;//“数据位”可选
-                    stopBitsCbx.Enabled = true;//“停止位”可选
-                    start_button.Enabled = false;//“复位终端”禁按
-
-                    query_mode_button.Enabled = false;//“查询模式”禁按
-                    start_button.Enabled = false;
+                    //baudRateCbx.Enabled = true;//“波特率”可选
+                    //parityCbx.Enabled = true;//“校验位”可选
+                    //dataBitsCbx.Enabled = true;//“数据位”可选
+                    //stopBitsCbx.Enabled = true;//“停止位”可选
                 }
                 catch
                 {
@@ -155,11 +148,11 @@ namespace Firmware_Update_V1._0
 
             if (!e.isOpend) //close successfully
             {
-                baudRateCbx.Enabled = false;
-                dataBitsCbx.Enabled = false;
-                stopBitsCbx.Enabled = false;
-                parityCbx.Enabled = false;
-                handshakingcbx.Enabled = false;
+                //baudRateCbx.Enabled = false;
+                //dataBitsCbx.Enabled = false;
+                //stopBitsCbx.Enabled = false;
+                //parityCbx.Enabled = false;
+                //handshakingcbx.Enabled = false;
             }
         }
 
@@ -185,20 +178,20 @@ namespace Firmware_Update_V1._0
 
             if (radioButton3.Checked) //display as string 
             {
-                this.receivetbx.AppendText(Encoding.Default.GetString(e.receivedBytes));
+                this.memoEdit1.MaskBox.AppendText(Encoding.Default.GetString(e.receivedBytes));
             }
             else //display as hex
             {
-                if (receivetbx.Text.Length > 0)
+                if (memoEdit1.Text.Length > 0)
                 {
-                    receivetbx.AppendText(" ");
+                    memoEdit1.MaskBox.AppendText(" ");
                 }
-                receivetbx.AppendText(IController.Bytes2Hex(e.receivedBytes));
+                memoEdit1.MaskBox.AppendText(IController.Bytes2Hex(e.receivedBytes));
             }
 
             if ((e.receivedBytes[0] == 0x0D) && (e.receivedBytes[e.receivedBytes.Length - 1] == 0x0D))
             {
-                receivetbx.Text += "\r\n";
+                memoEdit1.Text += "\r\n";
                 switch (e.receivedBytes[1])
                 { 
                     case 0xfe:
@@ -207,8 +200,8 @@ namespace Firmware_Update_V1._0
                         verbuf[1] = e.receivedBytes[3];
                         verbuf[2] = e.receivedBytes[5];
                         string result = string.Join(".", verbuf);
-                        firmware_version.Text = "固件版本" + ":\r\n" + result;
-                        start_button.Enabled = true;
+                        barButtonItem11.Caption = "固件版本:" + result;
+                        barButtonItem9.Enabled = true;
                         break;
                     case 0xf1:
                         f3.Output_Status_Show(e.receivedBytes);
@@ -234,33 +227,6 @@ namespace Firmware_Update_V1._0
 
         }
 
-        private void sendbtn_Click(object sender, EventArgs e)
-        {
-            String sendText = sendtbx.Text;
-            bool flag = false;
-            if (sendText == null)
-            {
-                return;
-            }
-            //set select index to the end
-            sendtbx.SelectionStart = sendtbx.TextLength;
-
-            if (radioButton3.Checked)
-            {
-                flag = controller.SendDataToCom(sendText);
-            }
-            else 
-            {
-                Byte[] bytes = IController.Hex2Bytes(sendText);
-                flag = controller.SendDataToCom(bytes);
-            }
-
-            if (!flag)
-            {
-                MessageBox.Show("数据发送", "失败");
-            }
-
-        }
 
         public static int UpdateState = 0;//升级状态
 
@@ -281,7 +247,7 @@ namespace Firmware_Update_V1._0
         private void button3_Click(object sender, EventArgs e)//“发送数据”
         {
             byte[] SendBytes = null;
-            string SendData = sendtbx.Text;//需要发送的数据
+            string SendData = memoEdit2.Text;//需要发送的数据
             List<string> SendDataList = new List<string>();//字符两两存一个
 
             try
@@ -328,10 +294,7 @@ namespace Firmware_Update_V1._0
                 e.Handled = "0123456789ABCDEF \b".IndexOf(char.ToUpper(e.KeyChar)) < 0;
         }
 
-        private void button5_Click(object sender, EventArgs e)//清除接收区
-        {
-            receivetbx.Clear();
-        }
+
 
         
         private void timer1_Tick(object sender, EventArgs e)//定时器（1s）
@@ -355,28 +318,9 @@ namespace Firmware_Update_V1._0
                     button3_Click(sender, e);
                 }
             }
-            if (firmware_version.Text == null || firmware_version.Text == "")
-            {
-                start_button.Enabled = false;   //“复位终端”禁按
-            
-     
-            }
-            else if (firmware_version.Text == "255")
-            {
-                start_button.Enabled = false;//“复位终端”可按           
-          
-            }
-            else
-            {
-                start_button.Enabled = true;//“复位终端”可按             
-            }
+           
         }
 
-        private void update_button_Click(object sender, EventArgs e)//固件升级窗口
-        {
-            Form2 frm = new Form2(this);//首先实例化
-            frm.ShowDialog();
-        }
         public static byte ByteToBCD(byte b)//byte转BCD
         {           
             byte b1 = (byte)(b / 10);//高四位         
@@ -425,36 +369,34 @@ namespace Firmware_Update_V1._0
             {
                 this.Invoke(new MethodInvoker(delegate
                 {
-                    firmware_version.Text = "";
                 }));
             }
             else//2.正常
             {
-                firmware_version.Text = "";
             }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (sendtbx.Text != "")
+            if (memoEdit2.Text != "")
             {
                 if (radioButton2.Checked == true)//切换到十六进制
                 {
-                    byte[] array = System.Text.Encoding.ASCII.GetBytes(sendtbx.Text);
+                    byte[] array = System.Text.Encoding.ASCII.GetBytes(memoEdit2.Text);
                     string ASCIIstr2 = null;
                     for(int i = 0; i < array.Length; i++)
                     {
                         int asciicode = (int)(array[i]);
                         ASCIIstr2 += (Convert.ToString(asciicode, 16).ToUpper().PadLeft(2,'0') + " ");
                     }
-                    sendtbx.Text = ASCIIstr2;
+                    memoEdit2.Text = ASCIIstr2;
                 }
                 else
                 {
                     byte[] CharBytes = null;
                     List<string> CharDataList = new List<string>();//字符两两存一个
                     //剔除所有空格
-                    string charstring = sendtbx.Text.Replace(" ", "").Replace("\r", "");
+                    string charstring = memoEdit2.Text.Replace(" ", "").Replace("\r", "");
                     //每两个字符放进认为一个字节
 
                     for (int i = 0; i < charstring.Length; i = i + 2)
@@ -470,7 +412,7 @@ namespace Firmware_Update_V1._0
                     {
                         CharBytes[j] = (byte)(Convert.ToInt32(CharDataList[j], 16));//把单个字符转十六进制
                     }
-                    sendtbx.Text = System.Text.Encoding.ASCII.GetString(CharBytes);
+                    memoEdit2.Text = System.Text.Encoding.ASCII.GetString(CharBytes);
                 }
             }
         }
@@ -482,68 +424,12 @@ namespace Firmware_Update_V1._0
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sendtbx_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sidePanel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPane1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabNavigationPage1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void receivetbx_TextChanged(object sender, EventArgs e)
-        {
-            receivetbx.SelectionStart = receivetbx.Text.Length;
-            receivetbx.ScrollToCaret();
-        }
-
-        private void comListCbx_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataBitsCbx_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void stopBitsCbx_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void handshakingcbx_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -579,6 +465,89 @@ namespace Firmware_Update_V1._0
         {
             Form2 frm = new Form2(this);//首先实例化
             frm.ShowDialog();
+        }
+
+        private void memoEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            memoEdit1.SelectionStart = memoEdit1.Text.Length;
+            memoEdit1.ScrollToCaret();
+        }
+
+        private void memoEdit2_EditValueChanged(object sender, EventArgs e)
+        {
+            memoEdit2.SelectionStart = memoEdit2.Text.Length;
+            memoEdit2.ScrollToCaret();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.memoEdit1.Text = "";
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            this.memoEdit2.Text = "";
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            String sendText = memoEdit2.Text;
+            bool flag = false;
+            if (sendText == null)
+            {
+                return;
+            }
+            //set select index to the end
+            memoEdit2.SelectionStart = memoEdit2.MaskBox.TextLength;
+
+            if (radioButton3.Checked)
+            {
+                flag = controller.SendDataToCom(sendText);
+            }
+            else
+            {
+                Byte[] bytes = IController.Hex2Bytes(sendText);
+                flag = controller.SendDataToCom(bytes);
+            }
+
+            if (!flag)
+            {
+                MessageBox.Show("数据发送", "失败");
+            }
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            byte[] SendBytes = new byte[8];
+
+            try
+            {
+                SendBytes[0] = 0x0D;
+                SendBytes[1] = 0xFE;//查询
+                SendBytes[2] = 0x00;
+                SendBytes[3] = 0X00;
+                SendBytes[4] = 0X00;
+                SendBytes[5] = 0X00;
+                SendBytes[6] = 0x00;
+                SendBytes[7] = 0x0D;
+                controller.SendDataToCom(SendBytes);
+            }
+            catch
+            {
+                MessageBox.Show("串口通讯错误", "错误");
+            }
+        }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form3 frm = new Form3(this);//首先实例化
+            f3 = frm;
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

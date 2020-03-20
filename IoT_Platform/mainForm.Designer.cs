@@ -34,15 +34,9 @@
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.baudRateCbx = new System.Windows.Forms.ComboBox();
-            this.parityCbx = new System.Windows.Forms.ComboBox();
-            this.dataBitsCbx = new System.Windows.Forms.ComboBox();
-            this.stopBitsCbx = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -52,20 +46,18 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.query_mode_button = new DevExpress.XtraEditors.SimpleButton();
-            this.start_button = new DevExpress.XtraEditors.SimpleButton();
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             this.sidePanel4 = new DevExpress.XtraEditors.SidePanel();
-            this.sidePanel2 = new DevExpress.XtraEditors.SidePanel();
-            this.firmware_version = new System.Windows.Forms.TextBox();
-            this.sendtbx = new System.Windows.Forms.TextBox();
-            this.receivetbx = new System.Windows.Forms.TextBox();
-            this.handshakingcbx = new System.Windows.Forms.ComboBox();
+            this.sidePanel5 = new DevExpress.XtraEditors.SidePanel();
+            this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -85,138 +77,47 @@
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barHeaderItem2 = new DevExpress.XtraBars.BarHeaderItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.ribbonGalleryBarItem2 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barListItem1 = new DevExpress.XtraBars.BarListItem();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.repositoryItemRichTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
+            this.sidePanel2 = new DevExpress.XtraEditors.SidePanel();
+            this.sidePanel3 = new DevExpress.XtraEditors.SidePanel();
+            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.sidePanel1.SuspendLayout();
             this.sidePanel4.SuspendLayout();
-            this.sidePanel2.SuspendLayout();
+            this.sidePanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
+            this.sidePanel2.SuspendLayout();
+            this.sidePanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(197, 75);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "波特率：";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(233, 143);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "校验位：";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(297, 192);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "数据位：";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(405, 230);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "停止位：";
-            // 
-            // baudRateCbx
-            // 
-            this.baudRateCbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.baudRateCbx.FormattingEnabled = true;
-            this.baudRateCbx.Items.AddRange(new object[] {
-            "4800",
-            "9600",
-            "19200",
-            "115200"});
-            this.baudRateCbx.Location = new System.Drawing.Point(251, 72);
-            this.baudRateCbx.Margin = new System.Windows.Forms.Padding(2);
-            this.baudRateCbx.Name = "baudRateCbx";
-            this.baudRateCbx.Size = new System.Drawing.Size(88, 20);
-            this.baudRateCbx.TabIndex = 7;
-            // 
-            // parityCbx
-            // 
-            this.parityCbx.AutoCompleteCustomSource.AddRange(new string[] {
-            "None",
-            "Even",
-            "Mark"});
-            this.parityCbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.parityCbx.FormattingEnabled = true;
-            this.parityCbx.Items.AddRange(new object[] {
-            "None",
-            "Even",
-            "Mark",
-            "Odd",
-            "Space"});
-            this.parityCbx.Location = new System.Drawing.Point(287, 141);
-            this.parityCbx.Margin = new System.Windows.Forms.Padding(2);
-            this.parityCbx.Name = "parityCbx";
-            this.parityCbx.Size = new System.Drawing.Size(88, 20);
-            this.parityCbx.TabIndex = 8;
-            // 
-            // dataBitsCbx
-            // 
-            this.dataBitsCbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dataBitsCbx.FormattingEnabled = true;
-            this.dataBitsCbx.Items.AddRange(new object[] {
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.dataBitsCbx.Location = new System.Drawing.Point(351, 190);
-            this.dataBitsCbx.Margin = new System.Windows.Forms.Padding(2);
-            this.dataBitsCbx.Name = "dataBitsCbx";
-            this.dataBitsCbx.Size = new System.Drawing.Size(88, 20);
-            this.dataBitsCbx.TabIndex = 9;
-            this.dataBitsCbx.SelectedIndexChanged += new System.EventHandler(this.dataBitsCbx_SelectedIndexChanged);
-            // 
-            // stopBitsCbx
-            // 
-            this.stopBitsCbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.stopBitsCbx.FormattingEnabled = true;
-            this.stopBitsCbx.Items.AddRange(new object[] {
-            "One",
-            "OnePointFive",
-            "Two"});
-            this.stopBitsCbx.Location = new System.Drawing.Point(459, 228);
-            this.stopBitsCbx.Margin = new System.Windows.Forms.Padding(2);
-            this.stopBitsCbx.Name = "stopBitsCbx";
-            this.stopBitsCbx.Size = new System.Drawing.Size(88, 20);
-            this.stopBitsCbx.TabIndex = 10;
-            this.stopBitsCbx.SelectedIndexChanged += new System.EventHandler(this.stopBitsCbx_SelectedIndexChanged);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(102, 12);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(44, 60);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "数据自测";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.sendbtn_Click);
             // 
             // timer1
             // 
@@ -255,7 +156,7 @@
             this.panel1.Location = new System.Drawing.Point(7, 19);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(96, 39);
+            this.panel1.Size = new System.Drawing.Size(101, 39);
             this.panel1.TabIndex = 17;
             // 
             // panel2
@@ -265,7 +166,7 @@
             this.panel2.Location = new System.Drawing.Point(4, 19);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(98, 38);
+            this.panel2.Size = new System.Drawing.Size(101, 38);
             this.panel2.TabIndex = 18;
             // 
             // radioButton4
@@ -298,7 +199,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(8, 60);
+            this.checkBox1.Location = new System.Drawing.Point(6, 62);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(84, 16);
@@ -308,53 +209,83 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.simpleButton2);
+            this.groupBox2.Controls.Add(this.simpleButton1);
             this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(11, 173);
+            this.groupBox2.Location = new System.Drawing.Point(7, 9);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(150, 80);
+            this.groupBox2.Size = new System.Drawing.Size(210, 106);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "接收区";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // button5
+            // simpleButton2
             // 
-            this.button5.Location = new System.Drawing.Point(102, 19);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(44, 56);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "清空接收";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(111, 62);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(94, 36);
+            this.simpleButton2.TabIndex = 30;
+            this.simpleButton2.Text = "保存接收";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(111, 19);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(94, 39);
+            this.simpleButton1.TabIndex = 29;
+            this.simpleButton1.Text = "清除接收";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.simpleButton4);
+            this.groupBox3.Controls.Add(this.simpleButton3);
             this.groupBox3.Controls.Add(this.textBox4);
             this.groupBox3.Controls.Add(this.panel1);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Location = new System.Drawing.Point(11, 260);
+            this.groupBox3.Location = new System.Drawing.Point(221, 9);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(150, 102);
+            this.groupBox3.Size = new System.Drawing.Size(215, 106);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "自测区";
+            this.groupBox3.Text = "发送区";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(116, 62);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(94, 36);
+            this.simpleButton4.TabIndex = 31;
+            this.simpleButton4.Text = "发送";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(116, 19);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(94, 39);
+            this.simpleButton3.TabIndex = 31;
+            this.simpleButton3.Text = "清除发送";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(80, 77);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(66, 21);
+            this.textBox4.Size = new System.Drawing.Size(28, 21);
             this.textBox4.TabIndex = 30;
             this.textBox4.Text = "1";
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -381,26 +312,6 @@
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // query_mode_button
-            // 
-            this.query_mode_button.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("query_mode_button.ImageOptions.Image")));
-            this.query_mode_button.Location = new System.Drawing.Point(299, 14);
-            this.query_mode_button.Name = "query_mode_button";
-            this.query_mode_button.Size = new System.Drawing.Size(141, 43);
-            this.query_mode_button.TabIndex = 2;
-            this.query_mode_button.Text = "模式查询";
-            this.query_mode_button.Click += new System.EventHandler(this.query_mode_button_Click);
-            // 
-            // start_button
-            // 
-            this.start_button.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("start_button.ImageOptions.Image")));
-            this.start_button.Location = new System.Drawing.Point(12, 14);
-            this.start_button.Name = "start_button";
-            this.start_button.Size = new System.Drawing.Size(127, 43);
-            this.start_button.TabIndex = 0;
-            this.start_button.Text = "开始测试";
-            this.start_button.Click += new System.EventHandler(this.start_button_Click);
-            // 
             // sidePanel1
             // 
             this.sidePanel1.Controls.Add(this.sidePanel4);
@@ -413,20 +324,8 @@
             // 
             // sidePanel4
             // 
-            this.sidePanel4.Controls.Add(this.sidePanel2);
-            this.sidePanel4.Controls.Add(this.sendtbx);
-            this.sidePanel4.Controls.Add(this.receivetbx);
-            this.sidePanel4.Controls.Add(this.label5);
-            this.sidePanel4.Controls.Add(this.dataBitsCbx);
-            this.sidePanel4.Controls.Add(this.stopBitsCbx);
-            this.sidePanel4.Controls.Add(this.parityCbx);
-            this.sidePanel4.Controls.Add(this.baudRateCbx);
-            this.sidePanel4.Controls.Add(this.label4);
-            this.sidePanel4.Controls.Add(this.groupBox3);
-            this.sidePanel4.Controls.Add(this.groupBox2);
-            this.sidePanel4.Controls.Add(this.label2);
-            this.sidePanel4.Controls.Add(this.label3);
-            this.sidePanel4.Controls.Add(this.handshakingcbx);
+            this.sidePanel4.Controls.Add(this.sidePanel5);
+            this.sidePanel4.Controls.Add(this.sidePanel3);
             this.sidePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sidePanel4.Location = new System.Drawing.Point(0, 0);
             this.sidePanel4.Name = "sidePanel4";
@@ -434,70 +333,26 @@
             this.sidePanel4.TabIndex = 26;
             this.sidePanel4.Text = "sidePanel4";
             // 
-            // sidePanel2
+            // sidePanel5
             // 
-            this.sidePanel2.Controls.Add(this.firmware_version);
-            this.sidePanel2.Controls.Add(this.start_button);
-            this.sidePanel2.Controls.Add(this.query_mode_button);
-            this.sidePanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sidePanel2.Location = new System.Drawing.Point(0, 376);
-            this.sidePanel2.Name = "sidePanel2";
-            this.sidePanel2.Size = new System.Drawing.Size(610, 69);
-            this.sidePanel2.TabIndex = 25;
-            this.sidePanel2.Text = "sidePanel2";
+            this.sidePanel5.Controls.Add(this.memoEdit2);
+            this.sidePanel5.Controls.Add(this.sidePanel2);
+            this.sidePanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sidePanel5.Location = new System.Drawing.Point(0, 279);
+            this.sidePanel5.Name = "sidePanel5";
+            this.sidePanel5.Size = new System.Drawing.Size(610, 166);
+            this.sidePanel5.TabIndex = 27;
+            this.sidePanel5.Text = "sidePanel5";
             // 
-            // firmware_version
+            // memoEdit2
             // 
-            this.firmware_version.Location = new System.Drawing.Point(449, 14);
-            this.firmware_version.Margin = new System.Windows.Forms.Padding(2);
-            this.firmware_version.Multiline = true;
-            this.firmware_version.Name = "firmware_version";
-            this.firmware_version.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.firmware_version.Size = new System.Drawing.Size(150, 43);
-            this.firmware_version.TabIndex = 26;
-            this.firmware_version.Text = "固件版本：\r\n";
-            this.firmware_version.TextChanged += new System.EventHandler(this.firmware_version_TextChanged);
-            // 
-            // sendtbx
-            // 
-            this.sendtbx.Location = new System.Drawing.Point(178, 266);
-            this.sendtbx.Margin = new System.Windows.Forms.Padding(2);
-            this.sendtbx.Multiline = true;
-            this.sendtbx.Name = "sendtbx";
-            this.sendtbx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.sendtbx.Size = new System.Drawing.Size(427, 104);
-            this.sendtbx.TabIndex = 21;
-            this.sendtbx.TextChanged += new System.EventHandler(this.sendtbx_TextChanged);
-            this.sendtbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sendtbx_KeyPress);
-            // 
-            // receivetbx
-            // 
-            this.receivetbx.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.receivetbx.Location = new System.Drawing.Point(178, 2);
-            this.receivetbx.Margin = new System.Windows.Forms.Padding(2);
-            this.receivetbx.Multiline = true;
-            this.receivetbx.Name = "receivetbx";
-            this.receivetbx.ReadOnly = true;
-            this.receivetbx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.receivetbx.Size = new System.Drawing.Size(427, 256);
-            this.receivetbx.TabIndex = 20;
-            this.receivetbx.TextChanged += new System.EventHandler(this.receivetbx_TextChanged);
-            // 
-            // handshakingcbx
-            // 
-            this.handshakingcbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.handshakingcbx.FormattingEnabled = true;
-            this.handshakingcbx.Items.AddRange(new object[] {
-            "None",
-            "XOnXOff",
-            "RequestToSend",
-            "RequestToSendXOnXOff"});
-            this.handshakingcbx.Location = new System.Drawing.Point(209, 222);
-            this.handshakingcbx.Margin = new System.Windows.Forms.Padding(2);
-            this.handshakingcbx.Name = "handshakingcbx";
-            this.handshakingcbx.Size = new System.Drawing.Size(88, 20);
-            this.handshakingcbx.TabIndex = 29;
-            this.handshakingcbx.SelectedIndexChanged += new System.EventHandler(this.handshakingcbx_SelectedIndexChanged);
+            this.memoEdit2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.memoEdit2.Location = new System.Drawing.Point(0, 0);
+            this.memoEdit2.MenuManager = this.ribbonControl1;
+            this.memoEdit2.Name = "memoEdit2";
+            this.memoEdit2.Size = new System.Drawing.Size(610, 49);
+            this.memoEdit2.TabIndex = 28;
+            this.memoEdit2.EditValueChanged += new System.EventHandler(this.memoEdit2_EditValueChanged);
             // 
             // ribbonControl1
             // 
@@ -521,13 +376,28 @@
             this.barHeaderItem1,
             this.barSubItem2,
             this.barCheckItem1,
-            this.barMdiChildrenListItem1});
+            this.barMdiChildrenListItem1,
+            this.barButtonItem7,
+            this.barHeaderItem2,
+            this.skinRibbonGalleryBarItem1,
+            this.ribbonGalleryBarItem1,
+            this.ribbonGalleryBarItem2,
+            this.barButtonItem8,
+            this.barButtonItem9,
+            this.barEditItem1,
+            this.barButtonItem10,
+            this.barListItem1,
+            this.barButtonItem11});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 19;
+            this.ribbonControl1.MaxItemId = 34;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage3});
+            this.ribbonControl1.QuickToolbarItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemMemoEdit1,
+            this.repositoryItemRichTextEdit1});
             this.ribbonControl1.Size = new System.Drawing.Size(610, 163);
             // 
             // barButtonItem1
@@ -660,6 +530,100 @@
             superToolTip1.Items.Add(toolTipTitleItem2);
             this.barMdiChildrenListItem1.SuperTip = superToolTip1;
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "串口模拟屏";
+            this.barButtonItem7.Id = 19;
+            this.barButtonItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
+            this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
+            this.barButtonItem7.Name = "barButtonItem7";
+            // 
+            // barHeaderItem2
+            // 
+            this.barHeaderItem2.Caption = "barHeaderItem2";
+            this.barHeaderItem2.Id = 20;
+            this.barHeaderItem2.Name = "barHeaderItem2";
+            // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "换肤";
+            // 
+            // 
+            // 
+            galleryItemGroup1.Caption = "Group1";
+            galleryItemGroup2.Caption = "Group2";
+            this.skinRibbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            galleryItemGroup1,
+            galleryItemGroup2});
+            this.skinRibbonGalleryBarItem1.Gallery.ShowItemText = true;
+            this.skinRibbonGalleryBarItem1.Id = 21;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // 
+            // ribbonGalleryBarItem1
+            // 
+            this.ribbonGalleryBarItem1.Caption = "InplaceGallery1";
+            // 
+            // 
+            // 
+            galleryItemGroup3.Caption = "Group3";
+            this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            galleryItemGroup3});
+            this.ribbonGalleryBarItem1.Id = 22;
+            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            // 
+            // ribbonGalleryBarItem2
+            // 
+            this.ribbonGalleryBarItem2.Caption = "ribbonGalleryBarItem2";
+            this.ribbonGalleryBarItem2.Id = 23;
+            this.ribbonGalleryBarItem2.Name = "ribbonGalleryBarItem2";
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "barButtonItem8";
+            this.barButtonItem8.Id = 24;
+            this.barButtonItem8.Name = "barButtonItem8";
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "开始测试";
+            this.barButtonItem9.Id = 25;
+            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
+            this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
+            this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Caption = "固件版本";
+            this.barEditItem1.Edit = this.repositoryItemMemoEdit1;
+            this.barEditItem1.Id = 26;
+            this.barEditItem1.Name = "barEditItem1";
+            // 
+            // repositoryItemMemoEdit1
+            // 
+            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
+            // 
+            // barButtonItem10
+            // 
+            this.barButtonItem10.Caption = "查询状态";
+            this.barButtonItem10.Id = 27;
+            this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
+            this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
+            // 
+            // barListItem1
+            // 
+            this.barListItem1.Id = 33;
+            this.barListItem1.Name = "barListItem1";
+            // 
+            // barButtonItem11
+            // 
+            this.barButtonItem11.Caption = "固件版本:      ";
+            this.barButtonItem11.Enabled = false;
+            this.barButtonItem11.Id = 32;
+            this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -692,9 +656,65 @@
             // 
             // ribbonPage3
             // 
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup5});
             this.ribbonPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage3.ImageOptions.Image")));
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "应用";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Screen";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem11);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "T19002";
+            // 
+            // repositoryItemRichTextEdit1
+            // 
+            this.repositoryItemRichTextEdit1.Name = "repositoryItemRichTextEdit1";
+            this.repositoryItemRichTextEdit1.ShowCaretInReadOnly = false;
+            // 
+            // sidePanel2
+            // 
+            this.sidePanel2.Controls.Add(this.groupBox3);
+            this.sidePanel2.Controls.Add(this.groupBox2);
+            this.sidePanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.sidePanel2.Location = new System.Drawing.Point(0, 49);
+            this.sidePanel2.Name = "sidePanel2";
+            this.sidePanel2.Size = new System.Drawing.Size(610, 117);
+            this.sidePanel2.TabIndex = 27;
+            this.sidePanel2.Text = "sidePanel2";
+            // 
+            // sidePanel3
+            // 
+            this.sidePanel3.Controls.Add(this.memoEdit1);
+            this.sidePanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sidePanel3.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel3.Name = "sidePanel3";
+            this.sidePanel3.Size = new System.Drawing.Size(610, 279);
+            this.sidePanel3.TabIndex = 26;
+            this.sidePanel3.Text = "sidePanel3";
+            // 
+            // memoEdit1
+            // 
+            this.memoEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.memoEdit1.Location = new System.Drawing.Point(0, 0);
+            this.memoEdit1.MenuManager = this.ribbonControl1;
+            this.memoEdit1.Name = "memoEdit1";
+            this.memoEdit1.Properties.ReadOnly = true;
+            this.memoEdit1.Size = new System.Drawing.Size(610, 281);
+            this.memoEdit1.TabIndex = 0;
+            this.memoEdit1.EditValueChanged += new System.EventHandler(this.memoEdit1_EditValueChanged);
             // 
             // ribbonPage2
             // 
@@ -728,10 +748,15 @@
             this.groupBox3.PerformLayout();
             this.sidePanel1.ResumeLayout(false);
             this.sidePanel4.ResumeLayout(false);
-            this.sidePanel4.PerformLayout();
-            this.sidePanel2.ResumeLayout(false);
-            this.sidePanel2.PerformLayout();
+            this.sidePanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).EndInit();
+            this.sidePanel2.ResumeLayout(false);
+            this.sidePanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -740,15 +765,6 @@
         #endregion
 
         //private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox baudRateCbx;
-        private System.Windows.Forms.ComboBox parityCbx;
-        private System.Windows.Forms.ComboBox dataBitsCbx;
-        private System.Windows.Forms.ComboBox stopBitsCbx;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -759,19 +775,11 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox2;
         private DevExpress.XtraEditors.SidePanel sidePanel1;
         private DevExpress.XtraEditors.SidePanel sidePanel4;
-        private DevExpress.XtraEditors.SimpleButton query_mode_button;
-        private DevExpress.XtraEditors.SimpleButton start_button;
-        private System.Windows.Forms.TextBox sendtbx;
-        private System.Windows.Forms.TextBox receivetbx;
-        private DevExpress.XtraEditors.SidePanel sidePanel2;
-        private System.Windows.Forms.TextBox firmware_version;
-        private System.Windows.Forms.ComboBox handshakingcbx;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
@@ -797,6 +805,31 @@
         private DevExpress.XtraBars.BarSubItem barSubItem2;
         private DevExpress.XtraBars.BarCheckItem barCheckItem1;
         private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem2;
+        private DevExpress.XtraEditors.SidePanel sidePanel3;
+        private DevExpress.XtraEditors.SidePanel sidePanel5;
+        private DevExpress.XtraEditors.SidePanel sidePanel2;
+        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.MemoEdit memoEdit2;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
+        private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit repositoryItemRichTextEdit1;
+        private DevExpress.XtraBars.BarListItem barListItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
     }
 }
 
